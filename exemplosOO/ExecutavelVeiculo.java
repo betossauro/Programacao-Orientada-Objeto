@@ -61,15 +61,17 @@ public class ExecutavelVeiculo {
                 barcoMaisAntigo = listaBarcos[i];
             }
         }
-        if (carroMaisAntigo.getAno() < motoMaisAntiga.getAno()) {
-            if (carroMaisAntigo.getAno() < barcoMaisAntigo.getAno()) {
-                System.out.println("O veiculo mais antigo é o: " + carroMaisAntigo);
+        if (carroMaisAntigo.getAno() < barcoMaisAntigo.getAno()) {
+            if (carroMaisAntigo.getAno() < motoMaisAntiga.getAno()) {
+                System.out.println("O veiculo mais antigo é o carro: " + carroMaisAntigo);
+            } else {
+                System.out.println("O veiculo mais antigo é a moto: " + motoMaisAntiga);
             }
         } else {
-            if (motoMaisAntiga.getAno() < barcoMaisAntigo.getAno()) {
-                System.out.println("O veiculo mais antigo é o: " + motoMaisAntiga);
+            if (barcoMaisAntigo.getAno() < motoMaisAntiga.getAno()) {
+                System.out.println("O veiculo mais antigo é o barco: " + barcoMaisAntigo);
             } else {
-                System.out.println("O veiculo mais antigo é o: " + barcoMaisAntigo);
+                System.out.println("O veiculo mais antigo é a moto: " + motoMaisAntiga);
             }
         }
     }
