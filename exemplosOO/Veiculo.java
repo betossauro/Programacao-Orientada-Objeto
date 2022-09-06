@@ -52,12 +52,10 @@ public class Veiculo {
 
     @Override
     public String toString() {
-        return "{" +
-                " fabricante='" + getFabricante() + "'" +
-                ", modelo='" + getModelo() + "'" +
-                ", ano='" + getAno() + "'" +
-                ", placa='" + getPlaca() + "'" +
-                "}";
+        return "\nFabricante: " + this.getFabricante()
+                + "\nModelo: " + this.getModelo()
+                + "\nAno: " + this.getAno()
+                + "\nPlaca: " + this.getPlaca();
     }
 
 }
