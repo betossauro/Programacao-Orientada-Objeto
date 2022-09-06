@@ -20,4 +20,12 @@ public class Barco extends Veiculo{
         this.tamanhoPopa = tamanhoPopa;
     }
     
+
+    @Override
+    public String toString() {
+        return super.toString() + "{" +
+            " tamanhoPopa='" + getTamanhoPopa() + "'" +
+            "}";
+    }
+
 }

@@ -8,7 +8,7 @@ public class Carro extends Veiculo {
         super(fabricante, modelo, ano, placa);
         this.potenciaCV = potenciaCV;
     }
-    
+
     public Carro() {
         super();
     }
@@ -22,12 +22,8 @@ public class Carro extends Veiculo {
     }
 
     @Override
-    public String toString(){
-        return "\nFabricante: " + this.getFabricante()
-        + "\nModelo: " + this.getModelo()
-        + "\nAno: " + this.getAno()
-        + "\nPlaca: " + this.getPlaca()
-        + "\nPotenciaCV: " + this.getPotenciaCV();
+    public String toString() {
+        return super.toString() + "\nPotencia CV: " + this.getPotenciaCV();
     }
 
 }
