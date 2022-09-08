@@ -4,8 +4,8 @@ public class FornoEletrico extends Eletrodomestico {
     
     private double capacidadeLitros;
 
-    public FornoEletrico(String modelo, String fabricante, double consumoEnergia, double capacidadeLitros) {
-        super(modelo, fabricante, consumoEnergia);
+    public FornoEletrico(String modelo, String fabricante, double KwDia, double capacidadeLitros) {
+        super(modelo, fabricante, KwDia);
         this.capacidadeLitros = capacidadeLitros;
     }
 
@@ -22,7 +22,7 @@ public class FornoEletrico extends Eletrodomestico {
     }
 
     @Override
-    public double calcularConsumoEnergiaDiario(int dias) {
-        return (super.getConsumoEnergia() * dias) * 1.25;
+    public double calcularConsumo(int dias) {
+        return (super.getKwDia() * dias) * 1.25;
     }
 }

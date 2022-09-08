@@ -4,8 +4,8 @@ public class Fogao extends Eletrodomestico{
 
     private int qtdeBocas;
 
-    public Fogao(String modelo, String fabricante, double consumoEnergia, int qtdeBocas) {
-        super(modelo, fabricante, consumoEnergia);
+    public Fogao(String modelo, String fabricante, double KwDia, int qtdeBocas) {
+        super(modelo, fabricante, KwDia);
         this.qtdeBocas = qtdeBocas;
     }
 

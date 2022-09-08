@@ -3,13 +3,13 @@ package lista_construtores_heranca;
 public class Eletrodomestico {
     private String modelo;
     private String fabricante;
-    private double consumoEnergia;
+    private double KwDia;
 
-    public Eletrodomestico(String modelo, String fabricante, double consumoEnergia) {
+    public Eletrodomestico(String modelo, String fabricante, double KwDia) {
         super();
         this.modelo = modelo;
         this.fabricante = fabricante;
-        this.consumoEnergia = consumoEnergia;
+        this.KwDia = KwDia;
     }
 
     public Eletrodomestico() {
@@ -32,19 +32,19 @@ public class Eletrodomestico {
         this.fabricante = fabricante;
     }
 
-    public double getConsumoEnergia() {
-        return consumoEnergia;
+    public double getKwDia() {
+        return KwDia;
     }
 
-    public void setConsumoEnergia(double consumoEnergia) {
-        this.consumoEnergia = consumoEnergia;
+    public void setKwDia(double KwDia) {
+        this.KwDia = KwDia;
     }
 
-    public double calcularConsumoEnergiaMensal(){
-        return this.getConsumoEnergia() * 30;
+    public double calcularConsumo(){
+        return this.getKwDia() * 30;
     }
 
-    public double calcularConsumoEnergiaDiario(int dias){
-        return this.getConsumoEnergia() * dias;
+    public double calcularConsumo(int dias){
+        return this.getKwDia() * dias;
     }
 }

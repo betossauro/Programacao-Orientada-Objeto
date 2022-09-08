@@ -9,13 +9,13 @@ public class Cozinha {
         FornoEletrico fe = new FornoEletrico("Forno Grill", "Fischer", 2.1, 44);
 
         // consumo em 10 dias
-        double calculoConsumoEnergia = g.calcularConsumoEnergiaDiario(10) + f.calcularConsumoEnergiaDiario(10)
-                + l.calcularConsumoEnergiaDiario(10) + m.calcularConsumoEnergiaDiario(10) + fe.calcularConsumoEnergiaDiario(10);
-        System.out.println("O consumo em 10 dias foi de: " + calculoConsumoEnergia);
+        double calculoConsumoPeriodo = g.calcularConsumo(10) + f.calcularConsumo(10)
+                + l.calcularConsumo(10) + m.calcularConsumo(10) + fe.calcularConsumo(10);
+        System.out.println("O consumo em 10 dias foi de: " + calculoConsumoPeriodo);
 
         // consumo mensal
-        double calculoConsumoMensal = g.calcularConsumoEnergiaMensal() + f.calcularConsumoEnergiaMensal()
-                + l.calcularConsumoEnergiaMensal() + m.calcularConsumoEnergiaMensal() + fe.calcularConsumoEnergiaMensal();
+        double calculoConsumoMensal = g.calcularConsumo() + f.calcularConsumo()
+                + l.calcularConsumo() + m.calcularConsumo() + fe.calcularConsumo();
         System.out.println("O consumo mensal foi de: " + calculoConsumoMensal);
     }
 }

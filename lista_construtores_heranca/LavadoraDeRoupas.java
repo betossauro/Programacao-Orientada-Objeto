@@ -4,8 +4,8 @@ public class LavadoraDeRoupas extends Eletrodomestico{
 
     private double capacidadeKg;
 
-    public LavadoraDeRoupas(String modelo, String fabricante, double consumoEnergia, double capacidadeKg) {
-        super(modelo, fabricante, consumoEnergia);
+    public LavadoraDeRoupas(String modelo, String fabricante, double KwDia, double capacidadeKg) {
+        super(modelo, fabricante, KwDia);
         this.capacidadeKg = capacidadeKg;
     }
 

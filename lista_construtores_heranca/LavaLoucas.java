@@ -4,8 +4,8 @@ public class LavaLoucas extends Eletrodomestico{
 
     private double capacidadeLitros;
 
-    public LavaLoucas(String modelo, String fabricante, double consumoEnergia, double capacidadeLitros) {
-        super(modelo, fabricante, consumoEnergia);
+    public LavaLoucas(String modelo, String fabricante, double KwDia, double capacidadeLitros) {
+        super(modelo, fabricante, KwDia);
         this.capacidadeLitros = capacidadeLitros;
     }
     
