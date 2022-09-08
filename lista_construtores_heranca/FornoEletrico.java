@@ -22,7 +22,20 @@ public class FornoEletrico extends Eletrodomestico {
     }
 
     @Override
+    public double calcularConsumo() {
+        return super.calcularConsumo() + this.calcularDesperdicio();
+    }
+
+    private double calcularDesperdicio() {
+        return super.calcularConsumo() * 0.25;
+    }
+
+    @Override
     public double calcularConsumo(int dias) {
-        return (super.getKwDia() * dias) * 1.25;
+        return super.calcularConsumo(dias) + this.calcularDesperdicio(dias);
+    }
+
+    private double calcularDesperdicio(int dias) {
+        return super.calcularConsumo() * 0.25;
     }
 }
