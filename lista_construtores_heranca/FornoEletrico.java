@@ -1,6 +1,7 @@
 package lista_construtores_heranca;
 
 public class FornoEletrico extends Eletrodomestico {
+    
     private double capacidadeLitros;
 
     public FornoEletrico(String modelo, String fabricante, double consumoEnergia, double capacidadeLitros) {
