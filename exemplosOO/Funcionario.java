@@ -1,33 +1,16 @@
 package exemplosOO;
 
-public class Funcionario {
-    private String nome;
-    private String cpf;
-    private String telefone;
+public class Funcionario extends Pessoa{
+    
     private int matricula;
 
-    public String getNome() {
-        return nome;
+    public Funcionario(String nome, int idade, String cpf, String telefone, Endereco endereco, int matricula) {
+        super(nome, idade, cpf, telefone, endereco);
+        this.matricula = matricula;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    public Funcionario() {
+        super();
     }
 
     public int getMatricula() {
@@ -37,4 +20,5 @@ public class Funcionario {
     public void setMatricula(int matricula) {
         this.matricula = matricula;
     }
+
 }
