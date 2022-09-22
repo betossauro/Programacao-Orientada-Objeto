@@ -1,5 +1,4 @@
 package simulado_1;
-
 public class LuisFarmacia extends LuisEmpresa{
 
     private LuisEstoque estoque;
@@ -26,32 +25,14 @@ public class LuisFarmacia extends LuisEmpresa{
     }   
 
     public void calcularValorEstoque(){
-        double valorTotal = 0;
-        for (int i = 0; i < this.estoque.getRemedios().length; i++) {
-            valorTotal += this.estoque.getRemedios()[i].getPreco();
-        }
-        System.out.println("O total em reais do estoque de remédios é: R$" + valorTotal);
+        this.getEstoque().calcularTotalEstoque();
     }
 
     public void calcularValorEstoqueLab(String laboratorio) {
-        double valorTotal = 0;
-        for (int i = 0; i < this.estoque.getRemedios().length; i++) {
-            if (laboratorio.equals(this.estoque.getRemedios()[i].getLaboratorio().getNome())) {
-                valorTotal += estoque.getRemedios()[i].getPreco();
-            }
-        }
-        System.out.println("O total em reais do estoque do laboratório " + laboratorio + " é de: R$" + valorTotal);
+        this.getEstoque().calcularTotalEstoqueLab(laboratorio);
     }
 
     public void buscarInformacoesLab(String laboratorio) {
-        for (int i = 0; i < estoque.getRemedios().length; i++) {
-            if (laboratorio.equals(estoque.getRemedios()[i].getLaboratorio().getNome())) {
-                System.out.println(estoque.getRemedios()[i].getLaboratorio());
-                break;
-            }
-        }
+        this.getEstoque().buscarInformacoes(laboratorio);
     }
-
-
-    
 }
