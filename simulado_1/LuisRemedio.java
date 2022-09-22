@@ -42,9 +42,9 @@ public class LuisRemedio {
 
     @Override
     public String toString() {
-        return "\nNome: " + getNome()
-            + "\nPreço: " + getPreco()
-            + "\nLaboratorio: " + getLaboratorio();
+        return "\nNome: " + this.getNome()
+            + "\nPreço: " + this.getPreco()
+            + "\nLaboratorio: " + this.getLaboratorio();
     }
     
 }
