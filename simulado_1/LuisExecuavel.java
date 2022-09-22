@@ -5,14 +5,15 @@ public class LuisExecuavel {
         // Lab Legrand
         LuisEndereco end1 = new LuisEndereco("Rua dos Remédios", 100, "Centro", "Palhoça", "Santa Catarina");
         LuisLaboratorio l1 = new LuisLaboratorio("Legrand", "12.345.678/0001-11", end1);
-        // Lab Medley
-        LuisEndereco end2 = new LuisEndereco("Rua da Medicação", 200, "Estreiro", "Florianópolis", "Santa Catarina");
-        LuisLaboratorio l2 = new LuisLaboratorio("Medley", "12.345.678/0001-22", end2);
         // Remédios Lab Legrand
         LuisRemedio r1l1 = new LuisRemedio("Rosuvas", 55.00, l1);
         LuisRemedio r2l1 = new LuisRemedio("Glifage", 35.00, l1);
         LuisRemedio r3l1 = new LuisRemedio("Aradois H", 50.00, l1);
         LuisRemedio r4l1 = new LuisRemedio("Trandilax", 10.00, l1);
+        
+        // Lab Medley
+        LuisEndereco end2 = new LuisEndereco("Rua da Medicação", 200, "Estreiro", "Florianópolis", "Santa Catarina");
+        LuisLaboratorio l2 = new LuisLaboratorio("Medley", "12.345.678/0001-22", end2);
         // Remédios Lab Medley
         LuisRemedio r1l2 = new LuisRemedio("Rosuvastatina", 50.00, l2);
         LuisRemedio r2l2 = new LuisRemedio("Lexotan", 40.00, l2);
