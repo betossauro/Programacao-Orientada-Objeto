@@ -43,9 +43,10 @@ public class LuisEmpresa {
 
     @Override
     public String toString() {
-        return "\nNome: " + getNome()
-            + "\nCNPJ: " + getCnpj()
-            + "\nEndereço: " + getEndereco();
+        return "\nEmpresa:"
+            + "\nNome: " + this.getNome()
+            + "\nCNPJ: " + this.getCnpj()
+            + "\nEndereço: " + this.getEndereco();
     }
 
 }
