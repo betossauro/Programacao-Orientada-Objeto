@@ -42,7 +42,7 @@ public class LuisRemedio {
 
     @Override
     public String toString() {
-        return "Nome: " + getNome()
+        return "\nNome: " + getNome()
             + "\nPreço: " + getPreco()
             + "\nLaboratorio: " + getLaboratorio();
     }

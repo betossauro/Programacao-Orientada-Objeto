@@ -43,7 +43,7 @@ public class LuisEmpresa {
 
     @Override
     public String toString() {
-        return "Nome: " + getNome()
+        return "\nNome: " + getNome()
             + "\nCNPJ: " + getCnpj()
             + "\nEndereço: " + getEndereco();
     }
