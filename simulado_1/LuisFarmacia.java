@@ -44,9 +44,9 @@ public class LuisFarmacia extends LuisEmpresa{
     }
 
     public void buscarInformacoesLab(String laboratorio) {
-        for (int i = 0; i < this.estoque.getRemedios().length; i++) {
-            if (laboratorio.equals(this.estoque.getRemedios()[i].getLaboratorio().getNome())) {
-                System.out.println(this.estoque.getRemedios()[i].getLaboratorio());
+        for (int i = 0; i < estoque.getRemedios().length; i++) {
+            if (laboratorio.equals(estoque.getRemedios()[i].getLaboratorio().getNome())) {
+                System.out.println(estoque.getRemedios()[i].getLaboratorio());
                 break;
             }
         }
