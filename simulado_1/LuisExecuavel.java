@@ -3,39 +3,39 @@ package simulado_1;
 public class LuisExecuavel {
     public static void main(String[] args) {
         // Lab Legrand
-        LuisEndereco end1 = new LuisEndereco("Rua dos Remédios", 100, "Centro", "Palhoça", "Santa Catarina");
-        LuisLaboratorio l1 = new LuisLaboratorio("Legrand", "12.345.678/0001-11", end1);
+        LuisEndereco endLegrand = new LuisEndereco("Rua dos Remédios", 100, "Centro", "Palhoça", "Santa Catarina");
+        LuisLaboratorio legrand = new LuisLaboratorio("Legrand", "12.345.678/0001-11", endLegrand);
         // Remédios Lab Legrand
-        LuisRemedio r1l1 = new LuisRemedio("Rosuvas", 55.00, l1);
-        LuisRemedio r2l1 = new LuisRemedio("Glifage", 35.00, l1);
-        LuisRemedio r3l1 = new LuisRemedio("Aradois H", 50.00, l1);
-        LuisRemedio r4l1 = new LuisRemedio("Trandilax", 10.00, l1);
+        LuisRemedio rosuvas = new LuisRemedio("Rosuvas", 55.00, legrand);
+        LuisRemedio glifage = new LuisRemedio("Glifage", 35.00, legrand);
+        LuisRemedio araDoisH = new LuisRemedio("Aradois H", 50.00, legrand);
+        LuisRemedio trandilax = new LuisRemedio("Trandilax", 10.00, legrand);
         
         // Lab Medley
-        LuisEndereco end2 = new LuisEndereco("Rua da Medicação", 200, "Estreiro", "Florianópolis", "Santa Catarina");
-        LuisLaboratorio l2 = new LuisLaboratorio("Medley", "12.345.678/0001-22", end2);
+        LuisEndereco endMedley = new LuisEndereco("Rua da Medicação", 200, "Estreiro", "Florianópolis", "Santa Catarina");
+        LuisLaboratorio medley = new LuisLaboratorio("Medley", "12.345.678/0001-22", endMedley);
         // Remédios Lab Medley
-        LuisRemedio r1l2 = new LuisRemedio("Rosuvastatina", 50.00, l2);
-        LuisRemedio r2l2 = new LuisRemedio("Lexotan", 40.00, l2);
-        LuisRemedio r3l2 = new LuisRemedio("Losartana", 45.00, l2);
-        LuisRemedio r4l2 = new LuisRemedio("Torsilax", 15.00, l2);
+        LuisRemedio rosuvastatina = new LuisRemedio("Rosuvastatina", 50.00, medley);
+        LuisRemedio lexotan = new LuisRemedio("Lexotan", 40.00, medley);
+        LuisRemedio losartana = new LuisRemedio("Losartana", 45.00, medley);
+        LuisRemedio torsilax = new LuisRemedio("Torsilax", 15.00, medley);
         // Estoque
-        LuisRemedio[] listaEstoque = {r1l1, r1l1, r1l1, r1l1, r2l1, r2l1, r2l1, r3l1, r3l1, r4l1, r1l2, r2l2, r2l2, r3l2, r3l2, r3l2, r4l2, r4l2, r4l2, r4l2};
-        LuisEstoque e1 = new LuisEstoque("Luciano", listaEstoque); 
+        LuisRemedio[] listaEstoque = {rosuvas, rosuvas, rosuvas, rosuvas, glifage, glifage, glifage, araDoisH, araDoisH, trandilax, rosuvastatina, lexotan, lexotan, losartana, losartana, losartana, torsilax, torsilax, torsilax, torsilax};
+        LuisEstoque estoque = new LuisEstoque("Luciano", listaEstoque); 
         // Farmacia Senac
-        LuisEndereco end3 = new LuisEndereco("Rua Jardim Silva", 360, "Centro", "Florianópolis", "Santa Catarina");
-        LuisFarmacia f1 = new LuisFarmacia("Farmácia do Senac", "12.345.678/0001-33", end3, e1);
+        LuisEndereco endFarmacia = new LuisEndereco("Rua Jardim Silva", 360, "Centro", "Florianópolis", "Santa Catarina");
+        LuisFarmacia farmacia = new LuisFarmacia("Farmácia do Senac", "12.345.678/0001-33", endFarmacia, estoque);
         // Informar responsável por estoque
-        f1.identificarResponsavelEstoque();
+        farmacia.identificarResponsavelEstoque();
         // Calcular valor total em reais dos remédios
-        f1.calcularValorEstoque();
+        farmacia.calcularValorEstoque();
         // Calcular valor total em reais do lab
-        f1.calcularValorEstoqueLab(l1.getNome());
-        f1.calcularValorEstoqueLab(l2.getNome());
+        farmacia.calcularValorEstoqueLab(legrand.getNome());
+        farmacia.calcularValorEstoqueLab(medley.getNome());
         System.out.println();
         // Buscar informações do laboratório
-        f1.buscarInformacoesLab(l1.getNome());
+        farmacia.buscarInformacoesLab(legrand.getNome());
         System.out.println();
-        f1.buscarInformacoesLab(l2.getNome());
+        farmacia.buscarInformacoesLab(medley.getNome());
     }
 }
