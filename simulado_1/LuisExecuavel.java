@@ -19,20 +19,26 @@ public class LuisExecuavel {
         LuisRemedio lexotan = new LuisRemedio("Lexotan", 40.00, medley);
         LuisRemedio losartana = new LuisRemedio("Losartana", 45.00, medley);
         LuisRemedio torsilax = new LuisRemedio("Torsilax", 15.00, medley);
+
         // Estoque
         LuisRemedio[] listaEstoque = {rosuvas, rosuvas, rosuvas, rosuvas, glifage, glifage, glifage, araDoisH, araDoisH, trandilax, rosuvastatina, lexotan, lexotan, losartana, losartana, losartana, torsilax, torsilax, torsilax, torsilax};
         LuisEstoque estoque = new LuisEstoque("Luciano", listaEstoque); 
+
         // Farmacia Senac
         LuisEndereco endFarmacia = new LuisEndereco("Rua Jardim Silva", 360, "Centro", "Florianópolis", "Santa Catarina");
         LuisFarmacia farmacia = new LuisFarmacia("Farmácia do Senac", "12.345.678/0001-33", endFarmacia, estoque);
+        
         // Informar responsável por estoque
         farmacia.identificarResponsavelEstoque();
+
         // Calcular valor total em reais dos remédios
         farmacia.calcularValorEstoque();
+
         // Calcular valor total em reais do lab
         farmacia.calcularValorEstoqueLab(legrand.getNome());
         farmacia.calcularValorEstoqueLab(medley.getNome());
         System.out.println();
+        
         // Buscar informações do laboratório
         farmacia.buscarInformacoesLab(legrand.getNome());
         System.out.println();
