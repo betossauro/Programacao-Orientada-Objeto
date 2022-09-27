@@ -39,7 +39,7 @@ public class LuisExecuavel {
         farmacia.calcularValorEstoqueLab("Legrand");
 
         // Buscar informações do laboratório
-        farmacia.buscarInformacoesLab("Medley");
-        farmacia.buscarInformacoesLab("Legrand");
+        farmacia.exibirInformacoesLab("Medley");
+        farmacia.exibirInformacoesLab("Legrand");
     }
 }

@@ -32,7 +32,7 @@ public class LuisFarmacia extends LuisEmpresa{
         this.getEstoque().calcularTotalEstoqueLab(laboratorio);
     }
 
-    public void buscarInformacoesLab(String laboratorio) {
+    public void exibirInformacoesLab(String laboratorio) {
         this.getEstoque().buscarInformacoes(laboratorio);
     }
 }
