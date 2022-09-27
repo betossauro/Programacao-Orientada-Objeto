@@ -48,13 +48,14 @@ public class LuisEstoque {
         System.out.println("O total em reais do estoque do laboratório " + laboratorio + " é de: R$" + valorTotal);
     }
 
-    public void buscarInformacoes(String laboratorio) {
+    public LuisLaboratorio buscarInformacoes(String laboratorio) {
+        LuisLaboratorio lab = null;
         for (int i = 0; i < this.getRemedios().length; i++) {
-            if (laboratorio.equals(this.getRemedios()[i].getLaboratorio().getNome())) {
-                System.out.println(this.getRemedios()[i].getLaboratorio());
-                break;
+            if (laboratorio.equalsIgnoreCase(this.getRemedios()[i].getLaboratorio().getNome())) {
+                lab = this.getRemedios()[i].getLaboratorio();
             }
         }
+        return lab;
     }
 
 }
