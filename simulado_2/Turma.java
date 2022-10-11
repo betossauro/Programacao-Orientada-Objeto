@@ -41,15 +41,10 @@ public class Turma {
 		this.regente = regente;
 	}
 
-	public int contarAlunos() {
-		return this.getAlunos().length;
-	}
-
-	public String[] listarNomesAlunas() {
-		String[] nomes = new String[this.getAlunos().length];
-		for (int i = 0; i < alunos.length; i++) {
-				nomes[i] = alunos[i].getNome();
+	public void listarAlunos() {
+		for (int i = 0; i < this.getAlunos().length; i++) {
+				System.out.println(this.getAlunos()[i].getNome());
 			}
-		return nomes;
+
 	}
 }

@@ -54,7 +54,7 @@ public class Escola {
 	public int contabilizarAlunos() {
 		int qtdeAlunos = 0;
 		for (int i = 0; i < this.getTurmas().length; i++) {
-			qtdeAlunos += this.getTurmas()[i].contarAlunos();
+			qtdeAlunos += this.getTurmas()[i].getAlunos().length;
 		}
 		return qtdeAlunos;
 	}
@@ -68,18 +68,11 @@ public class Escola {
 		}
 		return end;
 	}
-	
-	private void exibirAlunas(String[] alunas) {
-		System.out.println("Nome das alunas: ");
-		for (int i = 0; i < alunas.length; i++) {
-			System.out.println(alunas[i]+ " ");
-		}
-	}
 
 	public void listarNomeAlunas(int serie) {
 		for (int i = 0; i < this.getTurmas().length; i++) {
 			if(serie == this.getTurmas()[i].getSerie()) {
-				this.exibirAlunas(this.getTurmas()[i].listarNomesAlunas());
+				this.getTurmas()[i].listarAlunos();
 			}
 		}
 	}
