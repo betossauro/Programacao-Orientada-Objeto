@@ -47,4 +47,12 @@ public class Turma {
 			}
 
 	}
+
+	public void listarAlunosPorCidade(String cidade) {
+		for (int i = 0; i < this.getAlunos().length; i++) {
+			if(cidade.equalsIgnoreCase(this.getAlunos()[i].getEndereco().getCidade())) {
+				System.out.println(this.getAlunos()[i].getNome());
+			}
+		}
+	}
 }

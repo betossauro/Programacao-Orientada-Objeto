@@ -90,11 +90,7 @@ public class Escola {
 	public void listarAlunasPorCidade(String cidade) {
 		System.out.println("As alunas de " + cidade + " são:");
 		for (int i = 0; i < this.getTurmas().length; i++) {
-			for (int j = 0; j < this.getTurmas()[i].getAlunos().length; j++) {
-				if(cidade.equalsIgnoreCase(this.getTurmas()[i].getAlunos()[j].getEndereco().getCidade())) {
-					System.out.println(this.getTurmas()[i].getAlunos()[j].getNome());
-				}
-			}
+			this.getTurmas()[i].listarAlunosPorCidade(cidade);
 		}
 	}
 }
