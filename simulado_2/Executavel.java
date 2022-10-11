@@ -20,19 +20,19 @@ public class Executavel {
 		Aluno a5 = new Aluno("Mary Souza", 15, end5);
 		
 		Endereco end6 = new Endereco("Rua daos Bombons", 600, "Forquilhinhas", "São José", "SC");
-		Aluno b1 = new Aluno("Paula Vieira", 14, end6);
+		Aluno a6 = new Aluno("Paula Vieira", 14, end6);
 		
 		Endereco end7= new Endereco("Rua das Balas", 700, "Capoeiras", "Florianópolis", "SC");
-		Aluno b2 = new Aluno("Renata Augusta", 15, end7);
+		Aluno a7 = new Aluno("Renata Augusta", 15, end7);
 		
 		Endereco end8 = new Endereco("Rua das Trufas", 800, "Centro", "Biguaçu", "SC");
-		Aluno b3 = new Aluno("Luiza Pires", 15, end8);
+		Aluno a8 = new Aluno("Luiza Pires", 15, end8);
 		
 		Endereco end9= new Endereco("Rua dos Doces", 900, "Campinas", "São José", "SC");
-		Aluno b4 = new Aluno("Beatriz Santos", 14, end9);
+		Aluno a9 = new Aluno("Beatriz Santos", 14, end9);
 		
 		Endereco end10 = new Endereco("Rua dos Confetes", 1000, "Capoeiras", "Florianópolis", "SC");
-		Aluno b5 = new Aluno("Suellen Lima", 17, end10);
+		Aluno a10 = new Aluno("Suellen Lima", 17, end10);
 
 		Endereco end11= new Endereco("Rua das Enciclopédias", 500, "Centro", "Florianópolis", "SC");
 		Professor regenteTurmaA = new Professor("Zeca", 45, end11, "Matemática");
@@ -41,7 +41,7 @@ public class Executavel {
 		Professor regenteTurmaB = new Professor("Pires", 40, end12, "Português");
 		
 		Aluno[] alunosTurmaA = {a1, a2, a3, a4, a5};
-		Aluno[] alunosTurmaB = {b1, b2, b3, b4, b5};
+		Aluno[] alunosTurmaB = {a6, a7, a8, a9, a10};
 		
 		Turma turmaA = new Turma(7, alunosTurmaA, regenteTurmaA);
 		Turma turmaB = new Turma(8, alunosTurmaB, regenteTurmaB);
