@@ -11,11 +11,10 @@ public class Questao01 {
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
-        System.out.print("Digite uma data no formato dia/mês/ano: ");
-        String data = teclado.nextLine();
-
         DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate dataFormatada = LocalDate.parse(data, formatador);
+
+        System.out.print("Digite uma data no formato dia/mês/ano: ");
+        LocalDate dataFormatada = LocalDate.parse(teclado.nextLine(), formatador);
 
         DayOfWeek diaDaSemana = dataFormatada.getDayOfWeek();
 
