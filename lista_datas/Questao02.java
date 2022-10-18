@@ -13,7 +13,7 @@ public class Questao02 {
 
         Scanner teclado = new Scanner(System.in);
         System.out.print("Informe um número de dias para calcular a data futura: ");
-        int dias = teclado.nextInt();
+        int dias = Integer.parseInt(teclado.nextLine());
 
         DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate data = LocalDate.now();
