@@ -14,13 +14,13 @@ public class Questao06 {
 
         Scanner teclado = new Scanner(System.in);
         DateTimeFormatter formatador0 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
-        DateTimeFormatter formatador1 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)
+        DateTimeFormatter formatador1 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL)
                 .withLocale(new Locale("pt", "BR"));
-        DateTimeFormatter formatador2 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)
+        DateTimeFormatter formatador2 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL)
                 .withLocale(Locale.US).withZone(ZoneId.of("America/New_York"));
-        DateTimeFormatter formatador3 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)
+        DateTimeFormatter formatador3 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL)
                 .withLocale(Locale.FRANCE).withZone(ZoneId.of("Europe/Paris"));
-        DateTimeFormatter formatador4 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)
+        DateTimeFormatter formatador4 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL)
                 .withLocale(Locale.JAPANESE).withZone(ZoneId.of("Asia/Tokyo"));
 
         System.out.print("Informe a data e o horário no Brasil utilizando o formato -> (dia/mês/ano horas:minutos): ");
