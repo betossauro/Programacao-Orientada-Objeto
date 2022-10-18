@@ -21,8 +21,8 @@ public class Questao02 {
         LocalDate dataFutura = data.plusDays(dias);
         DayOfWeek diaDaSemana = dataFutura.getDayOfWeek();
 
-        System.out.println("Daqui a " + dias + " dias vai ser dia " + formatador.format(dataFutura) + ", "
-                + diaDaSemana.getDisplayName(TextStyle.FULL, new Locale("pt", "BR")).toLowerCase() + ".");
+        System.out.println("Daqui a " + dias + " dias vai ser dia " + formatador.format(dataFutura) + " ("
+                + diaDaSemana.getDisplayName(TextStyle.FULL, new Locale("pt", "BR")).toLowerCase() + ").");
 
         teclado.close();
     }
