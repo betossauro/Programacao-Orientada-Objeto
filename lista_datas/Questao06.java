@@ -17,7 +17,7 @@ public class Questao06 {
         DateTimeFormatter formatador1 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)
                 .withLocale(new Locale("pt", "BR"));
         DateTimeFormatter formatador2 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)
-                .withLocale(Locale.ENGLISH).withZone(ZoneId.of("America/New_York"));
+                .withLocale(Locale.US).withZone(ZoneId.of("America/New_York"));
         DateTimeFormatter formatador3 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)
                 .withLocale(Locale.FRANCE).withZone(ZoneId.of("Europe/Paris"));
         DateTimeFormatter formatador4 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)
