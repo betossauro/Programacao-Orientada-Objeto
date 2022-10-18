@@ -13,9 +13,6 @@ public class Questao06 {
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
-        System.out.print("Informe a data e o horário no Brasil utilizando o formato -> (dia/mês/ano horas:minutos): ");
-        String horaBrasil = teclado.nextLine();
-
         DateTimeFormatter formatador0 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
         DateTimeFormatter formatador1 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)
                 .withLocale(new Locale("pt", "BR"));
@@ -26,7 +23,8 @@ public class Questao06 {
         DateTimeFormatter formatador4 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.LONG)
                 .withLocale(Locale.JAPANESE).withZone(ZoneId.of("Asia/Tokyo"));
 
-        LocalDateTime tempoBrasil = LocalDateTime.parse(horaBrasil, formatador0);
+        System.out.print("Informe a data e o horário no Brasil utilizando o formato -> (dia/mês/ano horas:minutos): ");
+        LocalDateTime tempoBrasil = LocalDateTime.parse(teclado.nextLine(), formatador0);
         ZonedDateTime momentoBrasil = ZonedDateTime.of(tempoBrasil, ZoneId.of("America/Sao_Paulo"));
         System.out.println("Horário Brasil: " + momentoBrasil.format(formatador1)
                 + "\nHorario Nova Iorque: " + momentoBrasil.format(formatador2)

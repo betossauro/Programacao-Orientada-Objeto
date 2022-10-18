@@ -10,11 +10,10 @@ public class Questao04 {
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
-        System.out.println("Informe a sua data de nascimento utilizando o formado -> (dia/mês/ano): ");
-        String dataNascimento = teclado.nextLine();
-
         DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate dataFormatada = LocalDate.parse(dataNascimento, formatador);
+
+        System.out.println("Informe a sua data de nascimento utilizando o formado -> (dia/mês/ano): ");
+        LocalDate dataFormatada = LocalDate.parse(teclado.nextLine(), formatador);
 
         LocalDate data = LocalDate.now();
         Period tempoVida = Period.between(dataFormatada, data);

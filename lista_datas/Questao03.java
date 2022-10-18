@@ -10,19 +10,17 @@ public class Questao03 {
     public static void main(String[] args) {
 
         Scanner teclado = new Scanner(System.in);
-        System.out.print("Informe o horário de início da partida no formato -> (hora:minuto): ");
-        String inicio = teclado.nextLine();
-        System.out.print("Informe o horário de fim da partida no formato -> (hora:minuto): ");
-        String fim = teclado.nextLine();
-
         DateTimeFormatter formatador = DateTimeFormatter.ofPattern("HH:mm");
-        LocalTime tempoInicio = LocalTime.parse(inicio, formatador);
-        LocalTime tempoFim = LocalTime.parse(fim, formatador);
+
+        System.out.print("Informe o horário de início da partida no formato -> (hora:minuto): ");
+        LocalTime tempoInicio = LocalTime.parse(teclado.nextLine(), formatador);
+        System.out.print("Informe o horário de fim da partida no formato -> (hora:minuto): ");
+        LocalTime tempoFim = LocalTime.parse(teclado.nextLine(), formatador);
 
         Duration tempoTotal = Duration.between(tempoInicio, tempoFim);
 
         System.out.println(
-                "A partida de tênis durou " + tempoTotal.toHoursPart() + ":" + tempoTotal.toMinutesPart() + ".");
+                "A partida de tênis durou " + tempoTotal.toHoursPart() + " horas e " + tempoTotal.toMinutesPart() + " minutos.");
         teclado.close();
     }
 }
