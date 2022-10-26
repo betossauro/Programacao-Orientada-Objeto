@@ -97,7 +97,7 @@ public class Biblioteca {
     public void listarAutoresCidade(String cidade) {
         for (int i = 0; i < this.getListaObras().length; i++) {
             if (cidade.equalsIgnoreCase(this.getListaObras()[i].getAutor().getEnderecoAutor().getCidade())) {
-                System.out.println("Os autores " + this.getListaObras()[i].getAutor().getNome() + " moram em " + this.getListaObras()[i].getAutor().getEnderecoAutor().getCidade());
+                System.out.println("O(a) autor(a) " + this.getListaObras()[i].getAutor().getNome() + " mora em " + this.getListaObras()[i].getAutor().getEnderecoAutor().getCidade());
             }
         }
     }

@@ -48,6 +48,6 @@ public class Autor {
     public String toString() {
         return "\nNome: " + this.getNome() 
             + "\nData de Nascimento: " + this.getDataNascimento().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
-            + "\nEndereço do Autor: " + this.getEnderecoAutor();
+            + this.getEnderecoAutor();
     }
 }

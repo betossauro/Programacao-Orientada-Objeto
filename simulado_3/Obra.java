@@ -59,6 +59,6 @@ public abstract class Obra {
         return "\nTítulo: " + this.getTitulo() 
             + "\nEdição: " + this.getEdicao() 
             + "\nData de Publicação: " + this.getDataPublicacao().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
-            + "\nAutor: " + this.getAutor();
+            + this.getAutor();
     }
 }
